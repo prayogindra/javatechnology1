@@ -16,20 +16,20 @@ public class Barang {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(name="namaBarang", nullable=false, length = 50)
-	private String namaBarang;
+	@Column(name="nama_barang", nullable=false, length = 50)
+	private String nama_barang;
 	
-	@Column(name="jenisBarang", nullable=false, length = 30)
-	private String jenisBarang;
+	@Column(name="jenis_barang", length = 30)
+	private String jenis_barang;
 	
-	@Column(name="kotaPembuat", nullable=false, length = 30)
-	private String kotaPembuat;
+	@Column(name="kota_pembuat", length = 30)
+	private String kota_pembuat;
 	
-	@Column(name="jumlahBarang", nullable=false)
-	private int jumlahBarang; 
+	@Column(name="jumlah_barang")
+	private int jumlah_barang; 
 	
-	@Column(name="hargaBarang", nullable=false)
-	private int hargaBarang;
+	@Column(name="harga_barang")
+	private int harga_barang;
 
 	public int getId() {
 		return id;
@@ -39,45 +39,46 @@ public class Barang {
 		this.id = id;
 	}
 
-	public String getNamaBarang() {
-		return namaBarang;
+	public String getNama_barang() {
+		return nama_barang;
 	}
 
-	public void setNamaBarang(String namaBarang) {
-		this.namaBarang = namaBarang;
+	public void setNama_barang(String nama_barang) {
+		this.nama_barang = nama_barang;
 	}
 
-	public String getJenisBarang() {
-		return jenisBarang;
+	public String getJenis_barang() {
+		return jenis_barang;
 	}
 
-	public void setJenisBarang(String jenisBarang) {
-		this.jenisBarang = jenisBarang;
+	public void setJenis_barang(String jenis_barang) {
+		this.jenis_barang = jenis_barang;
 	}
 
-	public String getKotaPembuat() {
-		return kotaPembuat;
+	public String getKota_pembuat() {
+		return kota_pembuat;
 	}
 
-	public void setKotaPembuat(String kotaPembuat) {
-		this.kotaPembuat = kotaPembuat;
+	public void setKota_pembuat(String kota_pembuat) {
+		this.kota_pembuat = kota_pembuat;
 	}
 
-	public int getJumlahBarang() {
-		return jumlahBarang;
+	public int getJumlah_barang() {
+		return jumlah_barang;
 	}
 
-	public void setJumlahBarang(int jumlahBarang) {
-		this.jumlahBarang = jumlahBarang;
+	public void setJumlah_barang(int jumlah_barang) {
+		this.jumlah_barang = jumlah_barang;
 	}
 
-	public int getHargaBarang() {
-		return hargaBarang;
+	public int getHarga_barang() {
+		return harga_barang;
 	}
 
-	public void setHargaBarang(int hargaBarang) {
-		this.hargaBarang = hargaBarang;
+	public void setHarga_barang(int harga_barang) {
+		this.harga_barang = harga_barang;
 	}
 
+	
 	
 }

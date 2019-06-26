@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Barang</title>
+<link rel="stylesheet" href="../style/css/bootstrap.min.css">
+
+<script type="text/javascript" src="../scripts/jquery-3.4.0.min.js"></script>
+<script type="text/javascript" src="../style/js/bootstrap.min.js"></script>
+</head>
+<body>
+	Halaman Barang
+	<br>
+	<button class="btn btn-success" id="idBtnCreateNew">Create New</button>
+
+	<!-- jahit -->
+
+	<div id="idDivTableBarang"></div>
+
+	<!-- MODAL -->
+	
+	<div id="idmodal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div id="idmdlBody" class="modal-body">
+          <!-- akan ada injeksi di body ini -->
+        </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			debugger;
+
+			$.ajax({
+				url : '/listbarang',
+				method : 'Get',
+				success : function(model) {
+					$('#idDivTableBarang').html(model);
+				},
+				error : function(model) {
+				}
+			});
+
+			$('#idBtnCreateNew').click(function() {
+				//alert("tombol ditekan");
+				//$('#idMdlBtnNew').modal('show');
+				$.ajax({
+					url : './newbarang',
+					method : 'Get',
+					success : function(model) {
+						$('#idmodal').modal('show');
+						$('#idmdlBody').html(model);
+						debugger;
+					},
+					error : function(model) {
+						debugger;
+					}
+				});
+			});
+		});
+	</script>
+</body>
+</html>

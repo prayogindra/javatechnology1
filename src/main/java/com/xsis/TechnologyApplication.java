@@ -6,14 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @SpringBootApplication
-@Controller
 public class TechnologyApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TechnologyApplication.class, args);
-	}
-	@RequestMapping("/")
-	public String Home() {
-		return "Home";
+	
 	}
 }

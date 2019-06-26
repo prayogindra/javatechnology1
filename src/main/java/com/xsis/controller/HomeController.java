@@ -1,4 +1,4 @@
-/*package com.xsis.controller;
+package com.xsis.controller;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
@@ -12,4 +12,4 @@ public class HomeController {
 	public String home() {
 		return "home";
 	}
-}*/
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>List Barang</title>
+
+</head>
+<body>
+	List Barang
+	<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<td>Nomor</td>
+					<td>Nama</td>
+					<td>Jenis</td>
+					<td>Kota</td>
+					<td>Harga</td>
+					<td>Jumlah</td>
+					<td>Action</td>
+				</tr>
+			</thead>
+			<tbody id="idTblBarang">
+				<tr th:each="item : ${keybarang}">
+					<td th:text="${item.id}">ID</td>
+					<td th:text="${item.nama_barang}">Nama Barang</td>
+					<td th:text="${item.jenis_barang}">Jenis Barang</td>
+					<td th:text="${item.kota_pembuat}">Kota Barang</td>
+					<td th:text="${item.harga_barang}">Harga Barang</td>
+					<td th:text="${item.jumlah_barang}">Jumlah Barang</td>
+					<td>
+						<button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+						<button class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button>
+						<button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+					</td>
+					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
